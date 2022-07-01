@@ -6,7 +6,6 @@ var completedTasksHolder=document.getElementById("completed-tasks");
 var createNewTaskElement=function(taskString){
 
 	var listItem=document.createElement("li");
-
 	//label
 	var label=document.createElement("label");//label
 	//input (text)
@@ -26,8 +25,6 @@ var createNewTaskElement=function(taskString){
 	editButton.className="edit";
 	deleteButton.innerText="Delete";
 	deleteButton.className="delete";
-
-
 
 	//and appending.
 	listItem.appendChild(label);
