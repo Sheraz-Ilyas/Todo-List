@@ -6,14 +6,9 @@ var completedTasksHolder=document.getElementById("completed-tasks");
 var createNewTaskElement=function(taskString){
 
 	var listItem=document.createElement("li");
-	//label
 	var label=document.createElement("label");//label
-	//input (text)
 	var editInput=document.createElement("input");//text
-	//button.edit
 	var editButton=document.createElement("button");//edit button
-
-	//button.delete
 	var deleteButton=document.createElement("button");//delete button
 
 	label.innerText=taskString;
@@ -38,7 +33,6 @@ var createNewTaskElement=function(taskString){
 
 var addTask=function(){
 	console.log("Add Task...");
-	//Create a new list item with the text from the #new-task:
 	var listItem=createNewTaskElement(taskInput.value);
 
 	//Append listItem to incompleteTaskHolder
@@ -64,8 +58,6 @@ var containsClass=listItem.classList.contains("editMode");
 		//If class of the parent is .editmode
 		if(containsClass){
 
-		//switch to .editmode
-		//label becomes the inputs value.
 			label.innerText=editInput.value;
 		}else{
 			editInput.value=label.innerText;
@@ -104,9 +96,6 @@ var taskCompleted=function(){
 
 var taskIncomplete=function(){
 		console.log("Incomplete Task...");
-//Mark task as incomplete.
-	//When the checkbox is unchecked
-		//Append the task list item to the #incomplete-tasks.
 		var listItem=this.parentNode;
 	incompleteTaskHolder.appendChild(listItem);
 			bindTaskEvents(listItem,taskCompleted);
